@@ -34,7 +34,7 @@
  */
 
 #include <linux/types.h>
-#include <stk_cust_alsps.h>
+#include "stk_cust_alsps.h"
 
 #ifdef MT6573
 	#include <mach/mt6573_pll.h>

@@ -72,7 +72,7 @@
 #include <linux/hwmsensor.h>
 #include <linux/sensors_io.h>
 #include <linux/hwmsen_dev.h>
-#include <stk_cust_alsps.h>
+#include "stk_cust_alsps.h"
 #include "stk3x1x.h"
 #define DRIVER_VERSION          "3.5.2"
 //#define STK_PS_POLLING_LOG
@@ -4696,7 +4696,8 @@ int stk3x1x_als_operate(void* self, uint32_t command, void* buff_in, int size_in
 				err = stk3x1x_read_flag(obj->client, &flag);
 				if(err)
 					return err;
-				//Remove flag for AAL function.
+				
+//Remove flag for AAL function.
 				/*if(!(flag & STK_FLG_ALSDR_MASK))
 					return -1;	*/			
 				
